@@ -43,6 +43,7 @@ body {
 .nav {
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .nav-link {
@@ -152,20 +153,12 @@ body {
   font-size: 0.95rem;
 }
 
-.img-placeholder {
+.site-img {
   width: 100%;
-  min-height: 220px;
-  background: rgba(154, 166, 178, 0.22);
-  border: 2px dashed rgba(59, 72, 86, 0.35);
+  height: auto;
+  display: block;
   border-radius: 12px;
-  display: grid;
-  place-items: center;
-  color: var(--slate);
-  font-weight: 700;
-}
-
-.img-placeholder.small {
-  min-height: 140px;
+  border: 1px solid rgba(17, 19, 24, 0.08);
 }
 
 .about-layout {
@@ -177,7 +170,7 @@ body {
 
 .hobby {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 260px 1fr;
   gap: 16px;
   align-items: center;
   margin-top: 18px;
@@ -202,4 +195,26 @@ body {
 
 .site-footer a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hobby {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    text-align: left;
+  }
 }
